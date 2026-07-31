@@ -1,2 +1,16 @@
-# riniagency
-Independent Michigan insurance agency helping families and businesses protect what matters most through personalized coverage reviews, personal insurance, commercial insurance, and responsive local service.
+# Rini Agency
+
+Public website for Rini Agency, an independent Michigan insurance agency.
+
+## Local development
+
+```bash
+npm install
+npm run dev
+```
+
+## Deployment
+
+```bash
+npm run deploy
+```
