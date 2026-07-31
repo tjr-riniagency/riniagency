@@ -14,26 +14,30 @@ nav?.querySelectorAll('a').forEach((link) => link.addEventListener('click', () =
 
 document.querySelectorAll('[data-interest]').forEach((link) => {
   link.addEventListener('click', () => {
-    const select = document.querySelector('[name="interest"]');
-    if (select) select.value = link.dataset.interest === 'Business insurance' ? 'Business insurance' : link.dataset.interest === 'Life insurance' ? 'Life insurance' : '';
+    const select = document.querySelector('[name="entry.1819354482"]');
+    if (select) select.value = link.dataset.interest === 'Business insurance' ? 'Business Insurance' : link.dataset.interest === 'Life insurance' ? 'Life Insurance' : '';
   });
 });
 
 document.querySelector('#coverage-form')?.addEventListener('submit', (event) => {
-  event.preventDefault();
-  const data = new FormData(event.currentTarget);
-  const subject = `Website coverage request: ${data.get('interest')}`;
-  const body = [
-    `Name: ${data.get('firstName')} ${data.get('lastName')}`,
-    `Email: ${data.get('email')}`,
-    `Phone: ${data.get('phone')}`,
-    `Coverage interest: ${data.get('interest')}`,
-    '',
-    'Additional information:',
-    data.get('message') || 'None provided'
-  ].join('\n');
-  window.location.href = `mailto:tjr@riniagency.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-  document.querySelector('#form-note').textContent = 'Your prepared email is opening now. Send it to complete your request.';
+  const form = event.currentTarget;
+  if (form.elements.companyWebsite.value) {
+    event.preventDefault();
+    return;
+  }
+
+  const button = form.querySelector('button[type="submit"]');
+  const note = document.querySelector('#form-note');
+  button.disabled = true;
+  button.textContent = 'Sending…';
+  note.textContent = 'Sending your request directly to Rini Agency…';
+
+  window.setTimeout(() => {
+    form.reset();
+    button.disabled = false;
+    button.textContent = 'Send My Request';
+    note.textContent = 'Thank you! Your request was sent. TJ will follow up as soon as possible.';
+  }, 1200);
 });
 
 document.querySelector('#year').textContent = new Date().getFullYear();

@@ -116,35 +116,45 @@
       <div class="contact-copy">
         <p class="section-kicker">Let’s talk coverage</p>
         <h2 id="contact-title">Tell me what you’re looking to protect.</h2>
-        <p>Send a few details and your email app will prepare a message directly to Tom. No pressure and no call-center handoff.</p>
+        <p>Send a few details directly to TJ. No pressure and no call-center handoff.</p>
         <div class="contact-direct">
           <a href="tel:+18102801845"><small>Call or text</small><strong>810-280-1845</strong></a>
           <a href="mailto:tjr@riniagency.com"><small>Email</small><strong>tjr@riniagency.com</strong></a>
         </div>
       </div>
-      <form class="contact-form" id="coverage-form">
+      <iframe name="form-submission" title="Form submission" hidden></iframe>
+      <form class="contact-form" id="coverage-form" action="https://docs.google.com/forms/d/e/1FAIpQLSd-7Pd2FTMdTteQ5ucuGZCWUl8pyt95h4MsyMj7GMludlHAtw/formResponse" method="post" target="form-submission">
         <div class="form-row">
-          <label>First name<input name="firstName" autocomplete="given-name" required></label>
-          <label>Last name<input name="lastName" autocomplete="family-name" required></label>
+          <label>First name<input name="entry.4952741" autocomplete="given-name" required></label>
+          <label>Last name<input name="entry.1738164270" autocomplete="family-name" required></label>
         </div>
         <div class="form-row">
-          <label>Email<input type="email" name="email" autocomplete="email" required></label>
-          <label>Phone<input type="tel" name="phone" autocomplete="tel" required></label>
+          <label>Email<input type="email" name="entry.1841056179" autocomplete="email" required></label>
+          <label>Phone<input type="tel" name="entry.20590117" autocomplete="tel" required></label>
         </div>
         <label>What can I help with?
-          <select name="interest" required>
+          <select name="entry.1819354482" required>
             <option value="">Choose one</option>
-            <option>Auto insurance</option>
-            <option>Home insurance</option>
-            <option>Auto + home bundle</option>
-            <option>Business insurance</option>
-            <option>Life insurance</option>
+            <option value="Auto Insurance">Auto insurance</option>
+            <option value="Home Insurance">Home insurance</option>
+            <option value="Auto &amp; Home Bundle">Auto + home bundle</option>
+            <option value="Business Insurance">Business insurance</option>
+            <option value="Life Insurance">Life insurance</option>
             <option>Other</option>
           </select>
         </label>
-        <label>Anything I should know?<textarea name="message" rows="4" placeholder="Current renewal date, business type, best time to reach you, or anything else helpful."></textarea></label>
+        <label>Anything I should know?<textarea name="entry.1027882078" rows="4" placeholder="Current renewal date, business type, best time to reach you, or anything else helpful."></textarea></label>
+        <label>Would you like us to review your current policies or renewal documents?
+          <select name="entry.1390850855" required>
+            <option value="">Choose one</option>
+            <option>Yes</option>
+            <option>No</option>
+            <option>Not Sure</option>
+          </select>
+        </label>
+        <label style="position:absolute;left:-9999px" aria-hidden="true">Leave this field blank<input name="companyWebsite" tabindex="-1" autocomplete="off"></label>
         <button class="button button-primary" type="submit">Send My Request</button>
-        <p class="form-note" id="form-note">Submitting opens a prepared email addressed directly to Rini Agency.</p>
+        <p class="form-note" id="form-note" aria-live="polite">Your information is sent securely to Rini Agency. Please do not include Social Security or driver’s-license numbers.</p>
       </form>
     </section>
   </main>
@@ -153,7 +163,7 @@
     <div class="section-shell footer-inner">
       <div><a class="brand footer-brand" href="#top"><img src="/ra-mark.png" alt="" width="42" height="50"><span>RINI AGENCY</span></a><p>Independent insurance guidance for Michigan families and businesses.</p></div>
       <div><strong>Contact</strong><a href="tel:+18102801845">810-280-1845</a><a href="mailto:tjr@riniagency.com">tjr@riniagency.com</a><span>Davison, Michigan</span></div>
-      <div><strong>Explore</strong><a href="#personal">Personal</a><a href="#business">Business</a><a href="#about">About</a></div>
+      <div><strong>Explore</strong><a href="#personal">Personal</a><a href="#business">Business</a><a href="#about">About</a><a href="https://www.instagram.com/covered.bytj/" target="_blank" rel="noopener">Instagram · @covered.bytj</a></div>
     </div>
     <div class="section-shell legal"><span>© <span id="year"></span> Rini Agency LLC. All rights reserved.</span><span>Coverage is subject to policy terms, conditions, and availability.</span></div>
   </footer>
