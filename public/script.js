@@ -26,18 +26,7 @@ document.querySelector('#coverage-form')?.addEventListener('submit', (event) => 
     return;
   }
 
-  const button = form.querySelector('button[type="submit"]');
-  const note = document.querySelector('#form-note');
-  button.disabled = true;
-  button.textContent = 'Sending…';
-  note.textContent = 'Sending your request directly to Rini Agency…';
 
-  window.setTimeout(() => {
-    form.reset();
-    button.disabled = false;
-    button.textContent = 'Send My Request';
-    note.textContent = 'Thank you! Your request was sent. TJ will follow up as soon as possible.';
-  }, 1200);
 });
 
 document.querySelector('#year').textContent = new Date().getFullYear();
